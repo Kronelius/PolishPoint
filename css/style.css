@@ -879,6 +879,43 @@ p { max-width: 65ch; }
   margin-top: 2px;
 }
 
+/* ── Landscape (wide) Pricing Card ── */
+.pricing-card.pricing-card-wide {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) 1.6fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px 48px;
+}
+.pricing-card-wide-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.pricing-card-wide-intro .btn {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+.pricing-card.pricing-card-wide .pricing-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 14px;
+  margin-bottom: 0;
+  flex: none;
+}
+@media (max-width: 800px) {
+  .pricing-card.pricing-card-wide {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+  .pricing-card.pricing-card-wide .pricing-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Savings Calculator Widget ── */
 .calculator {
   background: linear-gradient(160deg, rgba(30,41,59,.5), rgba(15,23,42,.9));
